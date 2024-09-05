@@ -20,16 +20,27 @@ int find_missing_number(vector<int> numbers){
   return 0;
 }
 
+int validate_input(){
+  int x; 
+  while (!(cin >> x)) {
+    cout << endl << "Invalid Input !!";
+    cin.clear(); 
+    cin.ignore();
+    cout << endl << "Enter Number: ";
+  }
+
+  return x; 
+}
+
 vector<int> take_intpu(){
   int size = 0;
   cout << "Enter how many elements you want: "; 
   cin >> size; 
 
-  int x = 0;
   vector<int> array; 
   while (size--) {
     cout << "Enter Number: "; 
-    cin >> x; 
+    int x = validate_input(); 
     array.push_back(x);
   }
 
