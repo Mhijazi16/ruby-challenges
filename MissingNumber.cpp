@@ -20,8 +20,24 @@ int find_missing_number(vector<int> numbers){
   return 0;
 }
 
+vector<int> take_intpu(){
+  int size = 0;
+  cout << "Enter how many elements you want: "; 
+  cin >> size; 
+
+  int x = 0;
+  vector<int> array; 
+  while (size--) {
+    cout << "Enter Number: "; 
+    cin >> x; 
+    array.push_back(x);
+  }
+
+  return array;
+}
+
 int main(){
-  vector<int> numbers = {1,5,2,3,7,6};
+  vector<int> numbers = take_intpu();
   cout << find_missing_number(numbers);
 
   return 0;
